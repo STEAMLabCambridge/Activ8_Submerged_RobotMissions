@@ -19,7 +19,7 @@ right_motor = Motor(Port.A)
 # Initialize the drive base. 
 # In our robot, the wheel diameter is 88mm.
 # The distance between the two wheel-ground contact points is 145mm.
-drive_base = DriveBase(left_motor, right_motor, wheel_diameter=88, axle_track=145)
+drive_base = DriveBase(left_motor, right_motor, wheel_diameter=56, axle_track=141)
 # Optionally, uncomment the line below to use the gyro for improved accuracy.
 drive_base.use_gyro(True)
 
@@ -31,10 +31,15 @@ right_attachment = Motor(Port.C)
 right_sensor = ColorSensor(Port.F)
 left_sensor = ColorSensor(Port.E)
 
-
+## 1 turn is 360 is 3.2 cm 2 turns is 6.8 cm and max turn is 2.5 turns is 900 and 8.6 cm
+## diameter of one hole length = 0.6 cm 
+#
 #------------------------------------------
 # Code for the robot
 #-----------------------------------------
+drive_base.settings(straight_acceleration=900, straight_speed=900)
+left_attachment.run_angle(700,300)
+#drive_base.straight(-500)
 
-left_attachment.run_angle(800,500)
-left_attachment.run_angle(160,-300)
+
+

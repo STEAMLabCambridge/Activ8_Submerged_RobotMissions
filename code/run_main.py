@@ -4,21 +4,24 @@ from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch, hub_menu, multitask, run_task
 
-from run1_30_10_24 import run1
-from run_2_30_10_24 import run2
-from run_3_30_10_24 import run3
-from run_4_30_10_24 import run4
-from run_5_30_10_24 import run5
-from run_6_30_10_24 import run6
-from run_7_30_10_24 import run7
+from run_1 import run1
+from run_2 import run2
+from run_3 import run3
+from run_4 import run4
+from run_5 import run5
+from run_6_old import run6
+from run_7 import run7
+from run_8 import run8
+#from run_9 import run9
 
-#Initialize the PrimeHub as hub
+#Create hub object for PrimeHub 
+
 hub = PrimeHub()
-
-#Initialisate the robot 
-# Step 1 - Initialize the drive base 
-# Step 2 - Initialize the front and back motors 
-# Step 3 - Initialize the left and right color sensors in the front
+#------------------------------------------------------------------
+# Setup the robot 
+# Step 1 - Set up the drive base 
+# Step 2 - Set up  the front and back motors 
+# Step 3 - Set up the left and right color sensors in the front
 #---------------------------------------------------------------------
 
 # Initialize both motors. In this example, the motor on the
@@ -45,13 +48,13 @@ run1 = run1()
 run2 = run2()
 run3 = run3()
 run4 = run4()
-run5= run5()
+run5 = run5()
 run6 = run6()
 run7 = run7()
-    
-
+run8 = run8() 
+#run9 = run9()
 # Let's offer these menu options. You can add as many as you like.
-menu_options = ("1", "2", "3", "4", "5", "6", "7")
+menu_options = ("1", "2", "3", "4", "5", "6", "7", "8", "9")
 menu_index = 0
 
 while True:
@@ -111,6 +114,12 @@ while True:
         menu_index = 6
     elif selected == "7":
         run7.run(benny, left_attachment, right_attachment)
-        break 
-
-
+        menu_index = 7
+    elif selected == "8":
+        run8.run(benny, left_attachment, right_attachment)
+        menu_index = 8
+        break
+    #elif selected == "9":
+     #   run9.run(benny, left_attachment, right_attachment)
+       # menu_index = 9
+      #  break 
