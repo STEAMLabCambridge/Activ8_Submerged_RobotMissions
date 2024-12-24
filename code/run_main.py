@@ -54,7 +54,7 @@ run7 = run7()
 run8 = run8() 
 #run9 = run9()
 # Let's offer these menu options. You can add as many as you like.
-menu_options = ("1", "2", "3", "4", "5", "6", "7", "8", "9")
+menu_options = ("1", "2", "3", "4", "5", "6", "7", "8")
 menu_index = 0
 
 while True:
