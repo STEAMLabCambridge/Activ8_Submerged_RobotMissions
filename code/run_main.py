@@ -9,7 +9,7 @@ from run_2 import run2
 from run_3 import run3
 from run_4 import run4
 from run_5 import run5
-from run_6_old import run6
+from run_6 import run6
 from run_7 import run7
 from run_8 import run8
 #from run_9 import run9
@@ -54,7 +54,7 @@ run7 = run7()
 run8 = run8() 
 #run9 = run9()
 # Let's offer these menu options. You can add as many as you like.
-menu_options = ("1", "2", "3", "4", "5", "6", "7", "8")
+menu_options = ("1", "2", "3", "4", "5", "6", "7", "8", "9")
 menu_index = 0
 
 while True:

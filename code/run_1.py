@@ -30,22 +30,24 @@ class run1():
         right_attachment.run_angle(900,550)# run the linear actuator to right to pick plankton
         right_attachment.run_angle(900,-650)# run the linear actuator to left after picking plankton
        
-        benny.turn(-112) ##98 turn before the sonar discovery
+        benny.turn(-107) ##98 turn before the sonar discovery
         benny.straight(450)#670 # go straight
         #right_attachment.run_angle(900,200) # 
         
         #benny.turn(5)
         ##benny.straight(250) # once out go straight to angler fish so jbeam hits the angler fish
-        right_attachment.run_angle(900,230) # move linear actuator to left to push angler fish
+        #right_attachment.run_angle(900,230) # move linear actuator to left to push angler fish
+        benny.turn(-10)
         benny.straight(210) # move forward to push the angle fish 
+
         #benny.straight(50)# go straight to make sure the jbeam fully get the angler fish
         benny.straight(-50)# move back to go to the seabed sample
-        benny.turn(18)# turn right to the seabed sample
+        benny.turn(10)# turn right to the seabed sample
         benny.straight(110) # now move towards seabed sample
-        right_attachment.run_angle(900,450) # extend the arm to get in the circle of thesample 
+        right_attachment.run_angle(900,150) # extend the arm to get in the circle of thesample 
         benny.straight(150) # move forwards to lift the sample directly
-        right_attachment.run_angle(600,-360)## 
-        benny.turn(-26)
+        right_attachment.run_angle(600,160)## 
+        #benny.turn(-26)
         #benny.straight(-100)
         benny.straight(120)
         right_attachment.run_angle(600,-340) ## Picking up all thr krills and coral
